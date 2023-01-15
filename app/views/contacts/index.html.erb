@@ -1,0 +1,20 @@
+<div class="nav-contatos">
+  <div class="d-flex justify-content-between mb-0 pb-3">
+    <%= link_to "HOME", root_path %>
+    <%= link_to "SAIR", destroy_user_session_path, data: {turbo_method: :delete} %>
+  </div>
+  <hr class="p-0 m-0">
+  <h2 class="mt-4">Contatos</h2>
+</div>
+
+<div class="d-flex index-column pb-5">
+  <% @contacts.each do |contact| %>
+    <div class="d-flex index-line">
+      <div class="index-boxes"><%= contact.boxes.to_sentence %></div>
+      <div class="index-business"><%= contact.business %></div>
+      <div class="index-name"><%= contact.name %></div>
+      <div class="index-contatos"><%= contact.email %><br><%= contact.phone %></div>
+      <div class="index-about"><%= contact.about %></div>
+    </div>
+  <% end %>
+</div>

@@ -1,16 +1,46 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 
+
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "Archia-Regular", "Helvetica", "sans-serif";
+$headers-font: "Archia-Regular", "Helvetica", "sans-serif";
+
+//@font-face {
+  //font-family: 'Archia';
+  //src: font-url('archia-regular-webfont.ttf');
+  //src: font-url('archia-regular-webfont.ttf') format('truetype');
+//}
 
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+@font-face {
+   font-family: "Archia-Bold";
+   src: font-url('archia-semibold-webfont.eot');
+   src: font-url('archia-semibold-webfont.woff') format('woff'),
+        font-url('archia-semibold-webfont.woff2') format('woff2'),
+        font-url('archia-semibold-webfont.ttf') format('truetype')
+ }
+
+@font-face {
+  font-family: "Archia-Medium";
+  src: font-url('archia-medium-webfont.eot');
+  src: font-url('archia-medium-webfont.woff') format('woff'),
+       font-url('archia-medium-webfont.woff2') format('woff2'),
+       font-url('archia-medium-webfont.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: "Archia-Regular";
+  src: font-url('archia-regular-webfont.eot');
+  src: font-url('archia-regular-webfont.woff') format('woff'),
+       font-url('archia-regular-webfont.woff2') format('woff2'),
+       font-url('archia-regular-webfont.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: "Archia-Light";
+  src: font-url('archia-light-webfont.eot');
+  src: font-url('archia-light-webfont.woff') format('woff'),
+       font-url('archia-light-webfont.woff2') format('woff2'),
+       font-url('archia-light-webfont.ttf') format('truetype')
+}

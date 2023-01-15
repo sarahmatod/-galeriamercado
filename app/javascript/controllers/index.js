@@ -4,5 +4,20 @@
 
 import { application } from "./application"
 
+import BarbaController from "./barba_controller"
+application.register("barba", BarbaController)
+
+import ContactformController from "./contactform_controller"
+application.register("contactform", ContactformController)
+
+import FlickityJsController from "./flickity_js_controller"
+application.register("flickity-js", FlickityJsController)
+
+import FormController from "./form_controller"
+application.register("form", FormController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import NavbarController from "./navbar_controller"
+application.register("navbar", NavbarController)

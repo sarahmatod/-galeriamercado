@@ -1,0 +1,777 @@
+.tag {
+  position: absolute;
+  right: 48px;
+  bottom: 36px;
+  position: fixed;
+  transform: scale(0.8);
+  transition: cubic-bezier(0.69, 0.03, 0.4, 1.03) 0.5s;
+  z-index: 999;
+}
+
+.tag:hover {
+  transform: rotate(-40deg) scale(0.8);
+  transition: cubic-bezier(0.69, 0.03, 0.4, 1.03) 0.5s;
+  cursor: pointer;
+}
+
+// Hero //
+
+.hero {
+  background-image: asset-url("home-hero-3.jpg");
+  width:100vw;
+  background-size: cover;
+  height: 100vh;
+  background-position: left bottom;
+  color: $cream;
+  //-webkit-filter: brightness(90%);
+}
+
+.btn-hero {
+  background-color: $dark-green;
+  color: $cream;
+  border: none;
+  border-radius: 24px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  font-family: 'Archia';
+  font-size: 16px;
+  transition: ease 0.5s;
+
+  &:hover {
+    transition: ease 0.5s;
+    background-color: $green;
+    color: $cream;
+  }
+}
+
+.btn-hero {
+  width: 200px;
+  margin-bottom: 40px;
+}
+
+// Headline //
+
+.headline {
+  height: 90vh;
+}
+
+.headline-content {
+  max-width: 600px;
+  color: $green;
+}
+
+.headline img {
+  max-width: 200px;
+  margin-bottom: 80px;
+}
+
+// Imagens Quadradas Internas
+
+.internas {
+  height: 80vh;
+  width:100vw;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.interna-01 {
+  background-image: asset-url("interna03.jpg");
+  width: 31vw;
+}
+
+.interna-02 {
+  background-image: asset-url("interna01.jpg");
+  width: 31vw;
+  margin: 0 24px;
+}
+
+.interna-03 {
+  background-image: asset-url("interna04.jpg");
+  width: 31vw;
+}
+
+.interna-01,
+.interna-02,
+.interna-03 {
+  transition: 0.5s;
+  border-radius: 16px;
+  background-size: cover;
+  height: 70vh;
+  background-position: center;
+
+  &:hover {
+    transform: scale(1.01);
+    transition: 0.5s;
+    box-shadow: 2px 2px 10px $dark-cream;
+  }
+}
+
+
+
+
+// Onde Fica
+
+.onde-fica {
+  flex-direction: column;
+}
+
+.onde-fica-content {
+  margin: 180px 0;
+}
+
+.onde-fica h2,
+.onde-fica h5 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
+  font-family: 'Archia';
+  color: $dark-green;
+}
+
+.onde-fica-content img {
+  max-width: 680px;
+  margin: 0 20px;
+  border-radius: 16px;
+}
+
+
+.min-walk {
+  max-width: 560px;
+    p {
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+}
+
+.min-walk img {
+  transition: 0.5s;
+  width: 120px;
+}
+
+.min-walk img:hover {
+    transform: scale(1.01);
+    transition: 0.5s;
+  }
+
+.icon-180 {
+  width: 180px;
+}
+
+.icon-360 {
+  width: 400px;
+}
+
+// Esperamos
+
+.esperamos {
+  width: 100vw;
+  height: 80vh;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  color: $cream;
+  background-color: $dark-green;
+}
+
+.esperamos .container {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  justify-content: flex-end;
+}
+
+
+.esperamos-img {
+  position: absolute;
+  background-image: asset-url("te-esperamos.jpg");
+  width: 40%;
+  background-size: cover;
+  height: 80vh;
+  background-position: center;
+  border-radius: 16px;
+  left: 32px;
+  top: -60px;
+}
+
+.esperamos-text {
+  width: 45%;
+}
+
+
+
+// Slider
+
+.slider img {
+  width: 90vw;
+  padding: 64px 0 64px 0;
+}
+
+// Siriema
+
+.siriema {
+  margin-top: 140px;
+  background-color: $dark-green;
+  color: $cream;
+  height: 100vh;
+  //padding: 64px;
+}
+
+.siriema-content {
+  width: 60%;
+  flex-direction: column;
+}
+
+.siriema-img {
+  width: 60%;
+}
+
+.siriema-content img {
+  width: 56px;
+  margin: 24px 0;
+}
+
+.siriema-icon-1 {
+  transform: rotate(180deg)
+}
+
+// Produtos
+
+.produtos-titulo {
+  margin-top: 160px;
+  margin-bottom: 0;
+  color: $green;
+}
+
+.produtos-titulo img {
+  width: 20px;
+}
+
+.produtos-titulo p {
+  margin: 0 12px 0 12px;
+}
+
+// andares
+
+.andar {
+  flex-direction: column;
+  color: $green;
+  p {
+    font-size: 14px;
+  }
+}
+
+.andar h3 {
+  text-transform: uppercase;
+  margin-top: 80px;
+}
+
+.btn-outline-green {
+  border: 1pt solid $green;
+  border-radius: 12px;
+  padding: 12px;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: 'Archia';
+  font-size: 14px;
+  transition: 0.4s;
+  color: $green;
+}
+
+.btn-outline-green:hover {
+  background-color: $green;
+  color: $light-cream;
+  transition: 0.4s;
+}
+
+.flex-coluna {
+  flex-direction: column;
+}
+
+.line {
+  border-right: 1pt solid $green;
+}
+
+.line-left {
+  border-left: 1pt solid $green;
+}
+
+
+.box-andar1 {
+  height: 600px;
+}
+
+.box-andar2 {
+  height: 540px;
+}
+
+// Celular
+.celular {
+  width:100vw;
+  color: $green;
+  margin-top: 140px;
+}
+
+.celular .container {
+  width:100%;
+  align-items: start;
+}
+
+.celular-content {
+  width: 50%;
+  h3 {
+    margin-bottom: 48px;
+  }
+}
+
+.marketing {
+  border-bottom: 1pt solid $green;
+  padding-bottom: 16px;
+  h5 {
+    margin-bottom:12px;
+  }
+  small {
+    width: 64%;
+  }
+}
+
+.celular-img {
+  width: 40%;
+  margin-top: 72px;
+}
+
+//fachada
+
+.fachada {
+  border-bottom: 1pt solid $dark-green;
+  margin-bottom: 0;
+  width: 100vw;
+  margin-top: 140px;
+  height: 70vh;
+  background-color: $dark-green;
+  color: $cream;
+    .container {
+      justify-content: space-between;
+      width: 100%;
+      height: 70vh;
+    }
+    h3 {
+      width: 45%;
+    }
+    img {
+      width: 45%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+}
+
+//envolvidos
+
+.envolvidos {
+  border-top: 1pt solid $dark-green;
+  margin-top:0;
+  width: 100vw;
+  height: 50vh;
+  background-color: $dark-green;
+  color: $cream;
+
+  .container {
+    width: 100%;
+    height: 50vh;
+    justify-content: space-between;
+
+    .main {
+      width: 60%;
+    }
+    img {
+    width: 112px;
+    height: 112px;
+    margin-right: 32px;
+    opacity: 0.8;
+    }
+    .envolvido {
+      padding-right: 36px;
+      margin-right: 36px;
+      border-right: 1pt solid $cream;
+    }
+  }
+}
+
+
+
+// faq
+
+.faq {
+  margin-top: 110px;
+  margin-bottom: 70px;
+  color: $green;
+}
+
+.faq img {
+  height: 48px;
+  margin-right: 16px;
+}
+
+.collapse {
+  &:not(.show) {
+    display: none;
+  }
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-collapse);
+
+  &.collapse-horizontal {
+    width: 0;
+    height: auto;
+    @include transition($transition-collapse-width);
+  }
+}
+
+
+
+/////////////////////////////////////////////////
+
+@media (max-width: 1068px) {
+  .interna-01,
+  .interna-02,
+  .interna-03  {
+    width: 30vw;
+    height: 54vh;
+  }
+
+  .box-andar1,
+  .box-andar2 {
+    p {
+      font-size: 12.5px;
+    }
+  }
+
+  .btn-outline-green,
+  .btn-form {
+    font-size: 12.5px;
+  }
+
+  .box-andar1 {
+    height:540px;
+  }
+
+  .box-andar2 {
+    height:480px;
+  }
+
+}
+
+
+
+
+@media (max-width: 992px) {
+  .internas {
+    height: 60vh;
+  }
+
+  .interna-01,
+  .interna-02,  {
+    width: 45vw;
+    height: 40vh;
+  }
+
+  .interna-01 {
+    margin-right: 12px;
+  }
+
+
+  .interna-02 {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+
+  .hero {
+    background-position: center bottom;
+  }
+
+  .onde-fica-content img {
+    width: 60vw;
+  }
+
+  .siriema-content {
+    width: 80%;
+  }
+
+  .box-andar1,
+  .box-andar2 {
+    margin-bottom: 40px;
+    p {
+      font-size: 13.5px;
+    }
+  }
+
+  .ghost-kitchen {
+    border: 1pt solid $green;
+    border-radius: 16px;
+  }
+
+  .kitchen-content {
+    width: 100%;
+    margin-right: 60px;
+  }
+
+  .celular-img {
+    margin-top: 56px;
+  }
+
+
+  .fachada {
+      h3 {
+        width: 47%;
+      }
+      img {
+        width: 47%;
+        height: 40%;
+      }
+  }
+
+
+  .envolvidos {
+    height: 40vh;
+    .container {
+      height: 40vh;
+      flex-direction: column;
+      justify-content: center;
+      .main {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  .esperamos {
+    margin-bottom: 200px;
+    height: 50vh;
+  }
+
+  .esperamos .container {
+    height: 50vh;
+  }
+
+
+  .esperamos-img {
+    width: 45%;
+    height: 50vh;
+    top: -60px;
+  }
+
+  .esperamos-text {
+    width: 45%;
+  }
+
+
+}
+
+
+@media (max-width: 767px) {
+  .onde-fica-content img {
+    width: 70vw;
+  }
+
+  .siriema-content {
+    width: 50%;
+  }
+
+  .siriema-img {
+    width: 50%;
+    padding-bottom: 60px;
+  }
+
+
+.celular-content {
+  width: 60%;
+}
+
+.celular-img {
+  width: 33%;
+  margin-top: -56px;
+}
+
+.interna-01,
+.interna-02,  {
+  width: 45vw;
+  height: 36vh;
+}
+
+
+.esperamos {
+  height:100vh;
+}
+
+.esperamos .container {
+  height:100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.esperamos-img {
+  position: static;
+  width: 100%;
+  height: 48vh;
+  margin-bottom: 40px;
+  background-position: center right;
+}
+
+.esperamos-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  h4 {
+    width: 45%;
+  }
+  h3 {
+    width: 45%;
+    font-size: 16px;
+  }
+}
+
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 80vh;
+
+    .btn-hero {
+      width: 180px;
+    }
+  }
+
+  .headline {
+    height: 70vh;
+    padding-top: 40px;
+  }
+
+  .headline img {
+    max-width: 140px;
+    margin-bottom: 80px;
+  }
+
+  .onde-fica-content {
+    margin-top: 90px;
+  }
+
+  .onde-fica-content img {
+    width: 64vw;
+    margin: 16px;
+  }
+
+  .onde-fica {
+    h5 {
+    font-size: 10px;
+    margin: 0;
+    }
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .icon-180 {
+    width: 100px;
+  }
+
+  .bde-line {
+    border-left: 1pt solid $green;
+  }
+
+  .ghost-kitchen {
+    flex-direction: column;
+  }
+
+  .kitchen-content {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+
+  .celular .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 70%;
+      margin-bottom: 60px;
+    }
+    .celular-content {
+      width: 100%;
+    }
+  }
+
+  .internas {
+    height: 100vh;
+  }
+
+  .interna-02  {
+    width: 100%;
+    height: 70vh;
+  }
+
+
+  .fachada {
+    height: 80vh;
+    .container {
+      height: 80vh;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h3 {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 24px;
+    }
+  }
+
+  .guaja-arthros {
+    flex-direction: column;
+  }
+
+  .envolvido {
+    margin-bottom: 24px;
+  }
+
+  .envolvidos {
+    height: 70vh;
+    .container {
+      img {
+          width: 80px;
+          height: 80px;
+      }
+      .envolvido {
+        padding-right: 0;
+        margin-right: 0;
+        border-right: none;
+      }
+    }
+  }
+}
+
+@media (max-width:500px) {
+
+  .esperamos-img {
+    height: 42vh;
+    margin-bottom: 32px;
+  }
+
+  .esperamos-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h4 {
+      width: 100%;
+    }
+    h3 {
+      width: 100%;
+    }
+  }
+}

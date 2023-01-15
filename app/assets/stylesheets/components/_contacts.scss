@@ -1,0 +1,62 @@
+.index-column {
+  margin: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8%;
+  padding-top: 200px;
+  font-family: 'Archia';
+  font-size: 12px;
+  background-color: $dark-green;
+  color: $light-cream;
+}
+
+.index-line {
+  width: 92%;
+  border-bottom: 1pt solid $cream;
+  padding: 16px 8px;
+  height: 240px;
+}
+
+.index-boxes {
+  width: 13%;
+  padding: 4px;
+}
+
+.index-name {
+  width: 16%;
+  padding: 4px;
+}
+
+.index-business {
+  width: 16%;
+  padding: 4px;
+}
+
+.index-contatos {
+  width: 25%;
+}
+
+
+.index-about {
+  width: 30%;
+  padding: 4px;
+}
+
+.nav-contatos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 24px 8% 16px 8%;
+  color: $cream;
+  font-family: 'Archia';
+  background-color: $green;
+  height: 160px;
+}
+
+.nav-contatos a {
+  text-decoration: none;
+  color: $cream;
+  cursor: pointer;
+  font-size: 14px;
+}

@@ -1,0 +1,157 @@
+// Como Funciona
+
+.como-funciona {
+  flex-direction: column;
+  color: $green;
+}
+
+.como-funciona-main {
+  width: 100%;
+  margin-top: 48px;
+  border-radius: 20px;
+}
+
+  .par {
+    margin-left: 24px;
+  }
+
+  .curadoria {
+    width: 100%;
+    h3 {
+      width: 30%;
+      padding-right: 48px;
+    }
+    .curadotia-text {
+      width: 60%;
+      .par {
+        width:50%;
+      }
+    }
+  }
+
+
+
+
+// Isometricas
+
+.isometricas {
+  img {
+    width: 48%;
+    border-radius: 12px;
+  }
+}
+
+.isometrica-terreo {
+  width: 48%;
+  height: auto;
+  p, h3 {
+    width: 80%;
+  }
+}
+
+.isometrica-segundo {
+  width: 48%;
+  height: auto;
+  p, h3 {
+    width: 80%;
+  }
+}
+
+
+
+.plantas {
+  margin: 96px 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $dark-green;
+    img {
+      width: 70%;
+    }
+}
+
+.plantas .container {
+  height: 100vh;
+}
+
+
+@media (max-width: 1024px) {
+  .curadoria h3 {
+      width: 40%;
+      padding-right: 32px;
+  }
+}
+
+@media (max-width: 840px) {
+  .plantas img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .curadoria .curadotia-text {
+    flex-direction: column;
+    .par {
+      width:100%;
+    }
+  }
+
+  .icon-360 {
+    width: 260px;
+  }
+
+}
+
+
+////// MOBILE ///////
+
+@media (max-width: 576px) {
+
+  .como-funciona-main {
+    margin-top: 20px;
+  }
+
+  .curadoria {
+    flex-direction: column;
+    h3 {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 32px;
+    }
+    .curadotia-text {
+      width: 100%;
+      .par {
+        width:100%;
+        margin: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+
+  .isometricas {
+    img {
+      width: 100%;
+      margin-bottom: 36px;
+    }
+  }
+
+  .isometrica-terreo {
+    width: 100%;
+    p, h3 {
+      width: 100%;
+    }
+  }
+
+  .isometrica-segundo {
+    width: 100%;
+    height: auto;
+    p, h3 {
+      width: 100%;
+    }
+  }
+
+  .plantas img {
+    width: 100%;
+  }
+
+}

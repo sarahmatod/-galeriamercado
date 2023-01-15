@@ -1,0 +1,56 @@
+.faq {
+  width: 100vw;
+  flex-direction: column;
+}
+
+
+.accordion {
+  width: 60vw;
+}
+
+.accordion-button {
+  color: $green;
+}
+
+.accordion-button:focus {
+  border-color: white;
+}
+
+.accordion-body {
+  background-color: $cream;
+  padding: 24px;
+  color: $green;
+  border-radius: 16px;
+  margin: 0 0 16px 0;
+  font-family: 'Archia';
+}
+
+.accordion-button:not(.collapsed) {
+  color: $green;
+  background-color: rgba(0,0,0,0);
+  box-shadow:none;
+}
+
+@media (max-width: 1024px) {
+  .accordion {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .accordion {
+    width: 100vw;
+    padding: 0;
+    font-size: 12px;
+  }
+
+  .accordion-button {
+    padding: 16px 0;
+  }
+}

@@ -1,0 +1,18 @@
+.login {
+  padding-top: 120px;
+  flex-direction: column;
+  color: $cream;
+  background-color: $green;
+  height: 100vh;
+  font-family: 'Archia';
+}
+
+.login img {
+  width: 160px;
+}
+
+.login a {
+  color: $cream;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,447 @@
+  <%# NAVBAR %>
+  <%= render "shared/navbar" %>
+
+  <%# FORMULARIO DE CONTATO %>
+  <div class="form-contact">
+    <h2 class="mb-5" style="text-transform:none;">Olá!</h2>
+    <div class="form-fields">
+      <%= form_with(model: @contact) do |form| %>
+        <div class="field">
+          <%= form.label :name, 'Qual seu nome?' %><br>
+          <%= form.text_field :name, required: true, class:"form-contact-field" %>
+        </div>
+
+        <div class="field">
+          <%= form.label :business, 'E o nome do seu negócio?' %><br>
+          <%= form.text_field :business, required: true, class:"form-contact-field" %>
+        </div>
+
+        <div class="field">
+          <%= form.label :email, 'E-mail' %><br>
+          <%= form.text_field :email, required: true, class:"form-contact-field" %>
+        </div>
+
+        <div class="field">
+          <%= form.label :phone, 'Telefone' %><br>
+          <%= form.text_field :phone, required: true, class:"form-contact-field" %>
+        </div>
+
+        <div class="field">
+          <%= form.label :about, 'Conte-nos sobre seu negócio:' %><br>
+          <%= form.text_area :about, required: true, class:"form-contact-field sobre" %>
+        </div>
+
+        <div class="checkboxes">
+          <p>Selecione os espaços que melhor atendem o seu negócio:</p>
+          <% Contact::BOXES.each do |key| %>
+            <%= form.check_box :boxes, { multiple: true }, key, nil %>
+            <%= form.label key, class:"form-contact-checkbox" %>
+          <% end %>
+            <br>
+            <br>
+          <% Contact::KITCHENS.each do |key| %>
+            <%= form.check_box :boxes, { multiple: true }, key, nil %>
+            <%= form.label key, class:"form-contact-checkbox" %><br>
+          <% end %>
+        </div>
+
+        <div class="actions form-contact-btn" data-controller="contactform" data-action="click->contactform#sentForm">
+          <%= form.submit 'Enviar' %>
+        </div>
+
+      <% end %>
+    </div>
+    <div class="shut-form" data-controller="contactform" data-action="click->contactform#closeForm">
+      <%= image_tag "close.svg" %>
+    </div>
+  </div>
+  <div class="thank d-flex justify-content-center align-items-center">
+    <div>
+      <h3>Contato enviado.</h3>
+      <p>Entraremos em contato em breve.</p>
+    </div>
+
+    <div class="shut-form" data-controller="contactform" data-action="click->contactform#closeThank">
+    <%= image_tag "close.svg" %>
+    </div>
+  </div>
+
+
+<%# CONTEUDO HOME %>
+
+  <%# HERO %>
+  <div class="hero d-flex">
+    <div class="container d-flex flex-column justify-content-end mb-3 mb-sm-5">
+      <h1>UM NOVO <br>DESTINO.</h1>
+      <h3 class="mb-3 mt-3">Nasce um novo mercado <br>gastronômico no Centro <br>de Belo Horizonte.</h3>
+      <button class="btn-hero btn-form mt-3 mb-3 mb-sm-5" data-controller="contactform" data-action="contactform#openForm">alugar meu box</button>
+    </div>
+  </div>
+
+  <%# TAG %>
+  <div class="d-none d-md-block tag btn-form" data-controller="contactform" data-action="click->contactform#openForm">
+    <%= image_tag "selo.svg" %>
+  </div>
+
+  <%# HEADLINE %>
+  <div class="headline container d-flex justify-content-center align-items-center">
+    <div class="headline-content text-center">
+      <%= image_tag "headline-icons.svg" %>
+      <h3>Somos um novo espaço de encontro e redescoberta da mineiridade. No Centro da cidade, em frente a uma das entradas do Mercado Central — expoente turístico da capital e o mais visitado do país — a Galeria do Mercado dialoga diretamente com a identidade de Belo Horizonte e MG.</h3>
+    </div>
+  </div>
+
+  <%# IMAGENS INTERNAS %>
+  <div class="internas d-flex justify-content-between align-items-center">
+    <div class="interna-01 d-none d-sm-block"></div>
+    <div class="interna-02"></div>
+    <div class="interna-03 d-none d-lg-block"></div>
+  </div>
+
+
+  <%# ONDE FICA? %>
+  <div class="container onde-fica d-flex align-items-center justify-content-center">
+    <div class="onde-fica-content d-flex align-items-center mb-5">
+      <h2>onde</h2>
+      <%= image_tag "centro-bh.png" %>
+      <h2>fica</h2>
+    </div>
+
+    <%= image_tag "icon-full-green.svg", class:"icon-180 mt-3 mb-3 mt-sm-5 mb-sm-5" %>
+
+        <div class="onde-fica-content d-flex align-items-center mt-5 mb-2">
+          <h5>r goitacazes</h5>
+          <%= image_tag "mapa.svg" %>
+          <h5>490  centro</h5>
+        </div>
+        <div class="d-none d-sm-flex min-walk justify-content-between align-items-center">
+          <p class="text-center">8 min. <br> mercado novo</p>
+          <%=  image_tag "walk-left.svg", class:"walk-icon" %>
+          <p class="text-center">3 min. <br> shopping cidade</p>
+          <%=  image_tag "walk-right.svg" %>
+          <p class="text-center">1 min. <br> mercado central</p>
+        </div>
+
+
+  </div>
+
+  <%# ESPERAMOS %>
+  <div class="esperamos">
+      <div class="container d-flex align-items-center">
+        <div class="esperamos-img"></div>
+        <div class="esperamos-text">
+          <h4>Criamos espaço para <br>18 produtores locais, <br>3 restaurantes, <br>cafeteria e terraço.</h4>
+          <br>
+          <h3>Ocupando um imóvel de 460m², estamos em uma área privilegiada quando
+            o assunto é localização e circulação de pessoas, com fluxo alto e constante
+            de moradores e turistas. </h3>
+        </div>
+      </div>
+
+  </div>
+
+  <%# CARROSSEL INTERNAS %>
+  <%= render "shared/carousel" %>
+
+  <%# SIRIEMA %>
+  <div class="siriema row">
+    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+      <div class="siriema-content text-center">
+      <%= image_tag "icon-full-cream-SM.svg", class:"siriema-icon-1" %>
+      <h3>
+        Queremos criar um espaço que celebre e manifeste o que há de melhor na cultura
+        de Minas: a diversidade da gastronomia e excelência da produção local.
+      </h3>
+      <%= image_tag "icon-full-cream-SM.svg" %>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+      <%= image_tag "siriema.png", class:"siriema-img" %>
+    </div>
+  </div>
+
+  <%# PRODUTOS %>
+  <div class="produtos-titulo text-center">
+    <h2 class="m-0 p-0">PRODUTOS</h2>
+    <div class="d-flex justify-content-center align-items-center p-0 m-0">
+    <%= image_tag "icon-outline-green-SM.svg" %> <p>BH/MG</p> <%= image_tag "icon-outline-green-SM.svg"%>
+    </div>
+    <h2 class="m-0 p-0">LOCAIS</h2>
+  </div>
+
+  <%= render "shared/grid" %>
+
+  <%# COMO FUNCIONA? %>
+  <div class="como-funciona d-flex align-items-center container">
+    <%= image_tag "icon-outline-green-bg.svg", class:"icon-360" %>
+    <h2 class="text-center mt-4 mb-4">COMO VAI FUNCIONAR?</h2>
+    <%= image_tag "icon-outline-green-bg.svg", class:"icon-360" %>
+    <br>
+    <%= image_tag "galeria-isometrica.gif", class:"como-funciona-main mb-3 mb-sm-5", id:"como-funciona" %>
+
+      <div class="curadoria d-flex justify-content-between align-items-top mt-3 mb-3 mt-sm-5 mb-sm-5">
+        <h3>Por meio de uma curadoria aguçada, vamos reunir produtores e produtos que se diferenciam pela qualidade e pela valorização dos fazeres mineiros.  </h3>
+          <div class="d-flex curadotia-text justify-content-between">
+            <p class="par" style="padding-right:16px;">Reunindo 18 produtores locais, 3 restaurantes, cafeteria e terraço, a Galeria pretende se consolidar como espaço de experiências sinestésicas e ao mesmo tempo organizadas. Será palco de encontros, boas surpresas e celebracão da diversidade de nossa gastronomia, cultura e a excelência da produção local.  </p>
+            <p class="par">Teremos um ecossistema retroalimentar, em que os produtos conversam entre si, se complementando, sem concorrência direta. A Galeria será palco tanto para compras, quanto para convivência. Mais do que compartilhar o espaço físico, os produtores e suas marcas serão parte de uma comunidade articulada com governança, cuidado e afeto.</p>
+          </div>
+      </div>
+
+    <%= image_tag "icon-full-green.svg", class:"icon-180 mt-5 mb-5" %>
+
+    <div class="isometricas mt-5">
+
+      <div class="d-flex justify-content-between align-items-start mb-5">
+        <div class="isometrica-terreo">
+          <%= image_tag "iso_terreo.jpg", class:"d-block d-sm-none" %>
+          <h3>O andar térreo fica em
+              contato direto com a rua.</h3>
+              <br>
+          <p>São 15 operações divididas em boxes de diferentes tamanhos e características. Ao fundo você encontra a Cafeteria Volo.</p>
+        </div>
+
+        <%= image_tag "iso_terreo.jpg", class:"d-none d-sm-block" %>
+
+
+      </div>
+
+      <div class="d-flex justify-content-between align-items-start mt-5">
+        <%# image_tag "planta02.png", class:"iso-absolute iso-segundo" %>
+        <%= image_tag "iso_segundo.jpg", class:"iso-segundo-img d-none d-sm-block" %>
+        <div class="isometrica-segundo">
+          <%= image_tag "iso_segundo.jpg", class:"d-block d-sm-none" %>
+          <h3>O segundo andar é onde
+          ficam os restaurantes.</h3>
+          <br>
+          <p>São 3 restaurantes, 1 ghost kitchen e 4 boxes integrados aos restaurantes, num espaço que já prevê um grande balcão compartilhado.  </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="plantas">
+     <div class="container d-flex justify-content-center align-items-center">
+     <%= image_tag "plantas.png", id:"estrutura" %>
+    </div>
+  </div>
+
+
+
+  <%# ANDAR TERREO %>
+  <div class="container andar d-flex justify-content-center align-items-center">
+    <div class="title-terreo"><h3>Andar térreo</h3></div>
+    <%= image_tag "icon-outline-green.svg", class:"icon-180 mb-3" %>
+    <div class="row justify-content-center mt-5">
+      <div class="col-12 col-sm-6 col-lg-3 p-4 line line-left box-andar1 d-flex flex-column justify-content-between">
+        <div>
+          <h5>box tipo a</h5> <br>
+          <p>Ideais para marcas que têm grande volume e diversidade de produtos à venda, o box A tem 5,6m². Por ocuparem as porções laterais do piso térreo, contam com três superfícies verticais altas para exibição de produtos. As divisórias laterais são painéis de madeira perfurada do tipo ‘pegboard’, os quais garantem aos lojistas um recurso extremamente simples para a personalização de prateleiras ou outros tipos de suporte, como cabideiros e ganchos.</p>
+        </div>
+        <button class="btn-outline-green btn-form text-center" data-controller="contactform" data-action="click->contactform#openForm">quero um box tipo a</button>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 p-4 line box-andar1 d-flex flex-column justify-content-between bde-line">
+        <div>
+          <h5>box tipo b</h5> <br>
+          <p>De toda a Galeria, somente dois boxes contam com acesso direto à calçada, e o box B é um deles! Com 6,5m², sua estrutura é semelhante à dos boxes do tipo A, com a principal diferença de que ele comporta duas vitrines-balcão, uma voltada  para a calçada e outra voltada para o corredor interno. Além disso, há apenas uma divisória do tipo ‘pegboard’, já que a outra lateral é aberta para a calçada.</p>
+        </div>
+        <button class="btn-outline-green btn-form text-center">quero um box tipo b</button>
+      </div>
+
+      <div class="d-none d-lg-block col-lg-3 p-4 line box-andar1 d-lg-flex flex-column justify-content-between">
+        <div>
+          <h5>box tipo c</h5> <br>
+          <p>O box C conta com acesso direto à calçada. É a opção com maior área – 7,6m² – e assim como todos os boxes localizados ao centro do piso térreo, o box C é ideal para marcas cujos principais produtos sejam exibidos nas vitrines-balcão. Além disso, existe também a possibilidade de instalação de prateleiras, cabideiros ou ganchos suspensos, os quais podem ser penduradas diretamente no forro metálico perfurado que cobre todo o átrio central do piso térreo.</p>
+        </div>
+        <button class="btn-outline-green btn-form text-center" data-controller="contactform" data-action="click->contactform#openForm">quero um box tipo c</button>
+      </div>
+
+        <div class="d-lg-none col-12 col-sm-6 p-4 line line-left box-andar1 d-flex flex-column justify-content-between">
+        <div>
+          <h5>box tipo c</h5> <br>
+          <p>O box C conta com acesso direto à calçada. É a opção com maior área – 7,6m² – e assim como todos os boxes localizados ao centro do piso térreo, o box C é ideal para marcas cujos principais produtos sejam exibidos nas vitrines-balcão. Além disso, existe também a possibilidade de instalação de prateleiras, cabideiros ou ganchos suspensos, os quais podem ser penduradas diretamente no forro metálico perfurado que cobre todo o átrio central do piso térreo.</p>
+        </div>
+        <button class="btn-outline-green btn-form text-center" data-controller="contactform" data-action="click->contactform#openForm">quero um box tipo c</button>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 p-4 line box-andar1 d-flex flex-column justify-content-between bde-line">
+        <div>
+          <h5>box tipo d</h5> <br>
+          <p>Com 3,9m², os boxes do tipo D são os mais compactos de toda a Galeria. Concebidos para marcas com baixo volume e variedade de produtos, estão localizados no centro do piso térreo e, portanto, não contam com divisórias altas. Seus lojistas podem exibir os produtos dentro da vitrine-balcão e em prateleiras, cabideiros ou ganchos suspensos, os quais podem ser penduradas diretamente no forro metálico perfurado que cobre todo o átrio central.</p>
+        </div>
+        <button class="btn-outline-green btn-form text-center" data-controller="contactform" data-action="click->contactform#openForm">quero um box tipo d</button>
+      </div>
+
+    </div>
+
+
+    <div class="d-flex justify-content-center align-items-center mt-5 mb-5 text-center">
+      <%= image_tag "icon-outline-green-SM.svg", style:"width:28px" %>
+      <h5 style="margin-left: 20px; margin-right:20px;">todos os boxes contam com <br>bancada de granito e pia</h5>
+      <%= image_tag "icon-outline-green-SM.svg", style:"width:28px" %>
+      </div>
+
+  </div>
+
+  <%# SEGUNDO ANDAR %>
+  <div class="container andar d-flex justify-content-center align-items-center">
+    <h3>Segundo Andar</h3>
+    <%= image_tag "icon-outline-green.svg", class:"icon-180 mb-3" %>
+
+    <div class="row justify-content-center mt-5 mb-5">
+
+      <div class="col-12 col-sm-6 p-4 line line-left box-andar2 d-flex flex-column justify-content-between">
+        <div>
+          <h5>restaurantes</h5> <br>
+          <p class="mt-3">Com área privativa total de 9,8m2, as áreas destinadas às operações de restaurante contam com todas as instalações elétricas, hidráulicas e de gás necessárias para os mais variados tipos de operação. Além disso, todas as cozinhas já vêm equipadas com sistema de exaustão e renovação de ar. Em frente às cozinhas, na praça de alimentação, cada restaurante conta com uma vitrine-balcão para exposição de produtos e atendimento direto aos clientes. </p>
+        </div>
+        <button class="btn-outline-green text-center" data-controller="contactform" data-action="click->contactform#openForm">quero um restaurante</button>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 p-4 line box-andar2 d-flex flex-column justify-content-between bde-line">
+        <div>
+        <h5>box tipo e</h5> <br>
+        <p class="mt-3">Localizados no segundo piso, na praça de alimentação, os boxes do tipo E têm a mesma configuração espacial dos boxes do tipo A. São ideais para marcas que comercializem bebidas para levar ou para consumo imediato, na própria praça de alimentação.</p>
+        </div>
+        <button class="btn-outline-green text-center" data-controller="contactform" data-action="click->contactform#openForm">quero um box tipo e</button>
+      </div>
+
+      <div class="d-none d-lg-flex col-lg-3 p-4 line box-andar2 flex-column justify-content-between">
+        <div>
+          <h5>GHOST KITCHEN</span></h5>
+          <br>
+          <p class="mt-3">-</p>
+        </div>
+        <button class="btn-outline-green text-center" data-controller="contactform" data-action="click->contactform#openForm">lista de interesse</button>
+      </div>
+
+        <div class="d-flex d-lg-none p-4 ghost-kitchen justify-content-between align-items-end mt-5">
+        <div class="kitchen-content">
+          <h5>GHOST KITCHEN</span></h5>
+          <br>
+          <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quod inventore beatae aliquam officiis quia doloremque a sunt, hic earum, veniam et, aspernatur voluptatum optio ipsam repellendus accusantium consectetur dicta!</p>
+        </div>
+        <button class="btn-outline-green text-center" data-controller="contactform" data-action="click->contactform#openForm">lista de interesse</button>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <%# CELULAR %>
+
+  <div class="celular" >
+    <div class="container d-flex justify-content-between">
+
+      <%= image_tag "celular.png", class:"d-block d-sm-none celular-img" %>
+
+      <div class="celular-content">
+        <h3>Ao alugar um box na Galeria, você está adquirindo muito mais do que um novo espaço físico: garante também que sua marca esteja em nossas campanhas de marketing e agenda de eventos.</h3>
+        <div>
+          <div class="d-flex mb-4 marketing justify-content-between align-items-start">
+            <div>
+              <%=  image_tag "world.svg", style:"margin-bottom:12px;"%>
+              <h5>Alcance</h5>
+            </div>
+            <small class="mt-1">Nossa comunicação é potente e vamos articular frentes de ativação e divulgação junto às marcas.</small>
+          </div>
+          <div class="d-flex mb-4 marketing justify-content-between align-items-start">
+            <div>
+              <%=  image_tag "eye.svg", style:"margin-bottom:12px;"%>
+              <h5>Visibilidade</h5>
+            </div>
+            <small class="mt-1">Boxes compactos e estruturados para dar máxima visibilidade aos seus produtos.</small>
+          </div>
+          <div class="d-flex marketing justify-content-between align-items-start">
+            <div>
+              <%=  image_tag "star.svg", style:"margin-bottom:12px;"%>
+              <h5>Curadoria</h5>
+            </div>
+            <small class="mt-1">Por meio de uma percepção atenta do mercado e tendências, selecionaremos marcas relevantes que se impulsionem e construam uma comunidade única.</small>
+          </div>
+        </div>
+      </div>
+
+        <%= image_tag "celular.png", class:"d-none d-sm-block celular-img" %>
+
+    </div>
+  </div>
+
+  <%# FACHADA %>
+  <div class="fachada">
+    <div class="container d-flex align-items-center">
+      <%= image_tag "fachada-noite.jpg" %>
+      <h3>
+        Somos um lugar de encontro com outras pessoas, a cidade e o que ela tem de melhor para oferecer. Aqui, contamos histórias e vivemos experiências sinestésicas que têm a gastronomia como fio condutor. Uma celebração das tradições e da riqueza de Minas Gerais.
+      </h3>
+    </div>
+  </div>
+
+  <%# ENVOLVIDOS %>
+  <div class="envolvidos align-items-center d-flex">
+    <div class="d-flex container align-items-start">
+      <div class="main">
+        <h3>Quem está <br>por trás?</h3>
+      </div>
+      <div class="d-flex guaja-arthros">
+        <div class="envolvido d-flex align-items-center">
+          <a href="https://arthrosci.com.br/" target="_blank"> <%= image_tag "logo-arthros.png" %> </a>
+          <p>A Arthros é uma incorporadora que que se destaca no mercado imobiliário com plantas inteligentes que dialogam com o futuro.</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <a href="https://www.instagram.com/guaja.cc/" target="_blank"><%= image_tag "logo-guaja.svg"%></a>
+          <p>O guaja.estudio é a comunidade de profissionais criativos do guaja.cc que trabalha em redes dinâmicas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%# FAQ %>
+  <div class="faq d-flex justify-content-center align-items-center">
+    <div class="container d-flex justify-content-center align-items-center" style="width:100%;">
+      <div><%= image_tag "icon-faq.png" %></div>
+      <div><h2 class="mb-0">PERGUNTAS FREQUENTES</h2></div>
+    </div>
+    <div class="container p-5 accordion accordion-flush mb-5" id="accordionFlushExample">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Quando a galeria vai inaugurar?
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">A Galeria do Mercado está em fase de finalização das obras e deve inaugurar em março de 2023.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Qual será o horário de funcionamento?
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">De segunda à quinta, de 9h às 19h. Sexta e Sábado, de 9h às 00h. Domingo, de 9h às 14h.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item" id="faq">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            O que estará incluído no valor mensal de aluguel?
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">No valor do aluguel está incluído limpeza, segurança, gestão e divulgação. As contas de luz e água serão cobradas indiviualmente.</div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <%# FOOTER %>
+  <%= render "shared/footer" %>

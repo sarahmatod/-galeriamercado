@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # devise_for :users
+  devise_for :user, :path => '', :path_names => { :sign_in => "login" }
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  #resources :contacts, only: [:new, :create, :index]
+
+  root to: 'contacts#new'
+
+  # Read all
+  get "contatos", to: "contacts#index"
+
+  # Create
+  post "contacts", to: "contacts#create"
+
+
 end

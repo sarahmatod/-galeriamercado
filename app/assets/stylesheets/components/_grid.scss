@@ -1,0 +1,16 @@
+.grid-col {
+  margin: 60px 0 120px 0;
+  width: 100%;
+  flex-direction: column;
+  img {
+    margin: 16px;
+    width: 90%;
+    transition: ease 0.5s;
+    -webkit-filter: brightness(80%);
+    border-radius: 12px;
+  }
+  img:hover {
+      -webkit-filter: brightness(100%);
+      transition: ease 0.5s;
+  }
+}

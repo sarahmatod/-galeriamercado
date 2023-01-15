@@ -1,0 +1,126 @@
+.form-contact {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 340px;
+  background-color: $dark-green;
+  color: white;
+  font-family: 'Archia';
+  padding-top: 40px;
+  opacity: 0.99;
+  z-index: 99999;
+  transform: translate(-340px, 0);
+  transition: transform 0.6s;
+  padding: 40px;
+  overflow-y: scroll;
+}
+
+.form-contact::-webkit-scrollbar {
+  display: none;
+}
+
+.form-contact .field {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.form-contact p {
+  margin-top: 24px;
+}
+
+.open-form {
+  transform: translate(0, 0);
+  transition: transform 0.6s;
+}
+
+.shut-form {
+  cursor: pointer;
+  position: absolute;
+  top: 36px;
+  left: 300px;
+}
+
+.form-contact-field {
+  background-color: $green;
+  border: none;
+  height: 38px;
+  width: 240px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  margin-top: 6px;
+  color: $cream;
+}
+
+
+textarea:focus {
+  outline: none !important;
+  box-shadow: none;
+  padding: 2px;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none;
+  padding: 2px;
+}
+
+.form-contact-btn input {
+  margin-top: 24px;
+  border: 1pt solid $cream;
+  height: 42px;
+  width: 240px;
+  background-color: $green;
+  color: $cream;
+  border-radius: 12px;
+  transition: ease 0.6s;
+}
+
+.form-contact-btn input:hover {
+  background-color: $dark-green;
+  transition: ease 0.6s;
+}
+
+.checkboxes {
+  width: 240px;
+}
+
+.form-contact-checkbox {
+  margin-right: 16px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.checkbox:checked:before{
+  background-color:green;
+  }
+
+.form-contact-field.sobre {
+  height: 240px;
+}
+
+.hide-form {
+  display: none;
+}
+
+.thank {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 340px;
+    background-color: $dark-green;
+    color: white;
+    font-family: 'Archia';
+    padding-top: 40px;
+    opacity: 0.99;
+    z-index: 99999;
+    transform: translate(-340px, 0);
+    transition: transform 0.6s;
+    padding: 40px;
+  }
+
+.show-thankyou {
+  transform: translate(0, 0);
+  transition: transform 0.6s;
+}
