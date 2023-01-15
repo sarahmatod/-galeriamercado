@@ -1,6 +1,6 @@
 class Contact < ApplicationRecord
 
-  BOXES = %i[A B C D E F G]
-  KITCHENS = %i[Cozinha Ghost–Kitchen]
+  BOXES = %i[A B C D E ]
+  KITCHENS = %i[Restaurante Ghost–Kitchen]
 
 end
