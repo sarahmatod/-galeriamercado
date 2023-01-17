@@ -534,6 +534,11 @@
     width: 60vw;
   }
 
+  .siriema {
+    background-color: $dark-green;
+    color: $cream;
+  }
+
   .siriema-content {
     width: 80%;
   }
@@ -562,6 +567,8 @@
 
 
   .fachada {
+    background-color: $dark-green;
+    color: $cream;
       h3 {
         width: 47%;
       }
@@ -573,6 +580,8 @@
 
 
   .envolvidos {
+    background-color: $dark-green;
+    color: $cream;
     height: 40vh;
     .container {
       height: 40vh;
@@ -585,6 +594,8 @@
   }
 
   .esperamos {
+    background-color: $dark-green;
+    color: $cream;
     margin-bottom: 200px;
     height: 50vh;
   }
@@ -674,6 +685,12 @@
 }
 
 @media (max-width: 576px) {
+  .siriema {
+    background-color: $dark-green;
+    color: $cream;
+  }
+
+
   .hero {
     height: 80vh;
 
@@ -754,6 +771,8 @@
 
 
   .fachada {
+    background-color: $dark-green;
+    color: $cream;
     height: 80vh;
     .container {
       height: 80vh;
@@ -779,6 +798,8 @@
   }
 
   .envolvidos {
+    background-color: $dark-green;
+    color: $cream;
     height: 70vh;
     .container {
       img {

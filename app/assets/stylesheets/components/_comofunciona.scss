@@ -87,6 +87,12 @@
   }
 }
 
+@media (max-width: 992px) {
+  .plantas {
+    background-color: $dark-green;
+  }
+}
+
 @media (max-width: 840px) {
   .plantas img {
     width: 80%;
@@ -155,6 +161,10 @@
       width: 100%;
     }
   }
+
+  .plantas {
+    background-color: $dark-green;
+    }
 
   .plantas img {
     width: 100%;
