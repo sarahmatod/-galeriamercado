@@ -63,10 +63,16 @@
   margin: 96px 0;
   width: 100vw;
   height: 100vh;
-  background-color: $dark-green;
+  transition: ease 0.7s;
+  //background-color: $dark-green;
     img {
       width: 70%;
     }
+}
+
+.plantas:hover {
+  background-color: $dark-green;
+  transition: ease 0.7s;
 }
 
 .plantas .container {

@@ -2,16 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  connect() {
-  }
-
-  updateNavbar() {
-    if (window.scrollY >= window.innerHeight) {
-      this.element.classList.add("nav-green")
-    } else {
-      this.element.classList.remove("nav-green")
-    }
-  }
+  connect() {}
 
   updateLogo() {
     if (window.scrollY >= window.innerHeight) {
@@ -21,9 +12,17 @@ export default class extends Controller {
     }
   }
 
+  updateNavbar() {
+    if (window.scrollY >= window.innerHeight) {
+      this.element.classList.add("nav-green")
+    } else {
+      this.element.classList.remove("nav-green")
+    }
+  }
+}
+
   //updateTag() {
     //if (window.scrollY >= window.innerHeight) {
       //this.element.classList.remove("hide-element")
     //}
   //}
-}

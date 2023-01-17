@@ -6,7 +6,7 @@
   left: 0;
   width: 100vw;
   height: 64px;
-  background-color: rgba(3,43,23,0);
+  background-color: rgba(0,0,0,0);
   color: $light-cream;
   font-family: 'Archia-Regular';
   font-size: 12px;
@@ -42,8 +42,8 @@
 }
 
 .nav-green {
-  background-color: rgba(3,43,23,1);
-  transition: ease 0.5s
+  background-color: $dark-green;
+  transition: ease 0.5s;
 }
 
 .burger {

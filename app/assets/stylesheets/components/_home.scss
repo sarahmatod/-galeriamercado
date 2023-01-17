@@ -1,3 +1,15 @@
+
+@keyframes fadeInAnimation {
+  from {
+      opacity: 0;
+      transform: translateY(16px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
 .tag {
   position: absolute;
   right: 48px;
@@ -168,9 +180,17 @@
   height: 80vh;
   margin-top: 200px;
   margin-bottom: 200px;
-  color: $cream;
-  background-color: $dark-green;
+  color: $dark-green;
+  transition: background-color 0.7s ease;
 }
+
+.esperamos:hover {
+  background-color: $dark-green;
+  color: $cream;
+  transition: 0.7s ease;
+}
+
+
 
 .esperamos .container {
   width: 100%;
@@ -209,10 +229,17 @@
 
 .siriema {
   margin-top: 140px;
+  //background-color: $dark-green;
+  color: $dark-green;
+  height: 100vh;
+  transition: ease 0.7s;
+  //padding: 64px;
+}
+
+.siriema:hover {
   background-color: $dark-green;
   color: $cream;
-  height: 100vh;
-  //padding: 64px;
+  transition: ease 0.7s;
 }
 
 .siriema-content {
@@ -341,13 +368,13 @@
 //fachada
 
 .fachada {
-  border-bottom: 1pt solid $dark-green;
   margin-bottom: 0;
   width: 100vw;
   margin-top: 140px;
   height: 70vh;
-  background-color: $dark-green;
-  color: $cream;
+  //background-color: $dark-green;
+  color: $dark-green;
+  transition: ease 0.7s;
     .container {
       justify-content: space-between;
       width: 100%;
@@ -363,15 +390,27 @@
     }
 }
 
+.fachada:hover {
+  background-color: $dark-green;
+  color: $cream;
+  transition: ease 0.7s;
+}
+
+.fachada:hover + .envolvidos {
+  background-color: $dark-green;
+  color: $cream;
+  transition: ease 0.7s;
+}
+
 //envolvidos
 
 .envolvidos {
-  border-top: 1pt solid $dark-green;
+  transition: ease 0.7s;
   margin-top:0;
   width: 100vw;
   height: 50vh;
-  background-color: $dark-green;
-  color: $cream;
+  //background-color: $dark-green;
+  color: $dark-green;
 
   .container {
     width: 100%;
@@ -471,7 +510,7 @@
   }
 
   .interna-01,
-  .interna-02,  {
+  .interna-02  {
     width: 45vw;
     height: 40vh;
   }
@@ -594,7 +633,7 @@
 }
 
 .interna-01,
-.interna-02,  {
+.interna-02  {
   width: 45vw;
   height: 36vh;
 }

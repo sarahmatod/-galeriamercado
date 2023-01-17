@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import BackgroundController from "./background_controller"
+application.register("background", BackgroundController)
+
 import BarbaController from "./barba_controller"
 application.register("barba", BarbaController)
 
