@@ -177,7 +177,8 @@
     <h2 class="text-center mt-4 mb-4">COMO VAI FUNCIONAR?</h2>
     <%= image_tag "icon-outline-green-bg.svg", class:"icon-360" %>
     <br>
-    <%= image_tag "galeria-isometrica.gif", class:"como-funciona-main mb-3 mb-sm-5", id:"como-funciona" %>
+    <%= image_tag "galeria-isometrica.gif", class:"como-funciona-main mb-3 mb-sm-5 d-none d-sm-block", id:"como-funciona" %>
+    <div class="d-block d-sm-none isometrica-main-background-image"></div>
 
       <div class="curadoria d-flex justify-content-between align-items-top mt-3 mb-3 mt-sm-5 mb-sm-5">
         <h3>Por meio de uma curadoria aguçada, vamos reunir produtores e produtos que se diferenciam pela qualidade e pela valorização dos fazeres mineiros.  </h3>
@@ -193,7 +194,7 @@
 
       <div class="d-flex justify-content-between align-items-start mb-5">
         <div class="isometrica-terreo">
-          <%= image_tag "iso_terreo.jpg", class:"d-block d-sm-none" %>
+          <div class="isometrica-terreo-background-image"></div>
           <h3>O andar térreo fica em
               contato direto com a rua.</h3>
               <br>
@@ -206,10 +207,9 @@
       </div>
 
       <div class="d-flex justify-content-between align-items-start mt-5">
-        <%# image_tag "planta02.png", class:"iso-absolute iso-segundo" %>
         <%= image_tag "iso_segundo.jpg", class:"iso-segundo-img d-none d-sm-block" %>
         <div class="isometrica-segundo">
-          <%= image_tag "iso_segundo.jpg", class:"d-block d-sm-none" %>
+          <div class="isometrica-segundo-background-image"></div>
           <h3>O segundo andar é onde
           ficam os restaurantes.</h3>
           <br>
@@ -221,7 +221,8 @@
 
   <div class="plantas">
      <div class="container d-flex justify-content-center align-items-center">
-     <%= image_tag "plantas.png", id:"estrutura" %>
+     <%= image_tag "planta-terreo.png", id:"estrutura" %>
+     <%= image_tag "planta-dois.png" %>
     </div>
   </div>
 
