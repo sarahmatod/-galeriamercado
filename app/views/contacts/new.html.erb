@@ -379,25 +379,6 @@
     </div>
   </div>
 
-  <%# ENVOLVIDOS %>
-  <div class="envolvidos align-items-center d-flex">
-    <div class="d-flex container align-items-start">
-      <div class="main">
-        <h3>Quem está <br>por trás?</h3>
-      </div>
-      <div class="d-flex guaja-arthros">
-        <div class="envolvido d-flex align-items-center">
-          <a href="https://arthrosci.com.br/" target="_blank"> <%= image_tag "logo-arthros.png" %> </a>
-          <p>A Arthros é uma incorporadora que que se destaca no mercado imobiliário com plantas inteligentes que dialogam com o futuro.</p>
-        </div>
-        <div class="d-flex align-items-center">
-          <a href="https://www.instagram.com/guaja.cc/" target="_blank"><%= image_tag "logo-guaja.svg"%></a>
-          <p>O guaja.estudio é a comunidade de profissionais criativos do guaja.cc que trabalha em redes dinâmicas.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <%# FAQ %>
   <div class="faq d-flex justify-content-center align-items-center">
     <div class="container d-flex justify-content-center align-items-center" style="width:100%;">
@@ -443,6 +424,15 @@
 
     </div>
   </div>
+
+    <%# ENVOLVIDOS %>
+    <div class="flex items-start justify-between pb6 arthros">
+      <h3 class="w-30">Quem está <br>por trás?</h3>
+        <div class="flex w-60 justify-between">
+          <a href="https://arthrosci.com.br/" target="_blank" class="tr w-20"> <%= image_tag "logo-arthros.png" %> </a>
+          <p class="w-70">A Arthros é uma incorporadora que que se destaca no mercado imobiliário com plantas inteligentes que dialogam com o futuro.</p>
+      </div>
+    </div>
 
   <%# FOOTER %>
   <%= render "shared/footer" %>

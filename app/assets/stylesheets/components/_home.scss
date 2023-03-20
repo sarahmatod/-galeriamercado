@@ -427,9 +427,7 @@
     opacity: 0.8;
     }
     .envolvido {
-      padding-right: 36px;
-      margin-right: 36px;
-      border-right: 1pt solid $cream;
+
     }
   }
 }
@@ -468,6 +466,15 @@
 }
 
 
+.arthros {
+  max-width: 56vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+
 
 /////////////////////////////////////////////////
 
@@ -499,6 +506,12 @@
     height:480px;
   }
 
+}
+
+@media (max-width:1024px) {
+  .arthros {
+    max-width: 80vw;
+  }
 }
 
 
@@ -811,6 +824,17 @@
         margin-right: 0;
         border-right: none;
       }
+    }
+  }
+
+  .arthros {
+    max-width: 90vw;
+    flex-direction: column;
+    h3 {
+      margin-bottom: 40px;
+    }
+    .w-60 {
+      width:100%;
     }
   }
 }
